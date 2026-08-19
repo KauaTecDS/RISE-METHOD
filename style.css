@@ -1142,3 +1142,165 @@ a:focus-visible {
 /* =====================================================
    FIM DO CSS
 ===================================================== */
+/* =====================================================
+   BOTÃO CTA — PULSANDO
+===================================================== */
+
+.main-button {
+    min-height: 52px;
+    padding: 0 18px;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    animation: ctaPulse 1.8s infinite ease-in-out;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* BRILHO AO REDOR DO BOTÃO */
+
+.main-button::before {
+    content: "";
+
+    position: absolute;
+
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(25, 217, 255, .45);
+
+    opacity: .7;
+
+    animation: ctaGlow 1.8s infinite ease-in-out;
+
+    z-index: -1;
+}
+
+
+/* PULSAÇÃO */
+
+@keyframes ctaPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.035);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* BRILHO */
+
+@keyframes ctaGlow {
+
+    0% {
+        opacity: .25;
+        transform: scale(.98);
+    }
+
+    50% {
+        opacity: .8;
+        transform: scale(1.02);
+    }
+
+    100% {
+        opacity: .25;
+        transform: scale(.98);
+    }
+
+}
+.main-button {
+    min-height: 52px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.nome-azul {
+    color: #19d9ff !important;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 5px rgba(25, 217, 255, 0.8),
+        0 0 12px rgba(25, 217, 255, 0.6),
+        0 0 25px rgba(25, 217, 255, 0.4);
+
+    animation: brilhoNome 2s infinite ease-in-out;
+}
+
+@keyframes brilhoNome {
+
+    0% {
+        text-shadow:
+            0 0 5px rgba(25, 217, 255, 0.5),
+            0 0 12px rgba(25, 217, 255, 0.3);
+    }
+
+    50% {
+        text-shadow:
+            0 0 8px rgba(25, 217, 255, 1),
+            0 0 18px rgba(25, 217, 255, 0.8),
+            0 0 35px rgba(25, 217, 255, 0.5);
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px rgba(25, 217, 255, 0.5),
+            0 0 12px rgba(25, 217, 255, 0.3);
+    }
+}
+/* =====================================================
+   CTA FINAL — AJUSTES
+===================================================== */
+
+.final-cta .small-title {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.final-cta h2 {
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+.final-cta-text {
+    max-width: 340px;
+    margin: 0 auto 25px;
+
+    color: #9aa6bc;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.final-cta .button-subtitle {
+    margin-top: 11px;
+
+    color: #a9b7cc;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: .2px;
+}
+.button-subtitle {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin-top: 12px;
+    color: #a8b6cc;
+}
