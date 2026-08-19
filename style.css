@@ -1,0 +1,1144 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070b17;
+    color: #f4f7ff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =====================================================
+   VARIÁVEIS
+===================================================== */
+
+:root {
+    --bg: #070b17;
+    --bg-2: #0a1020;
+    --card: #0b1121;
+    --border: rgba(94, 144, 255, 0.22);
+
+    --blue: #19d9ff;
+    --blue-2: #3d7cff;
+
+    --text: #f4f7ff;
+    --muted: #8b96ad;
+
+    --container: 390px;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: min(
+        calc(100% - 32px),
+        var(--container)
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgba(7,11,23,0.96);
+
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    width: min(
+        calc(100% - 32px),
+        var(--container)
+    );
+
+    min-height: 58px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.logo span {
+    color: var(--blue);
+    margin-left: 2px;
+}
+
+.header-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.header-socials a {
+    color: #727e98;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+    text-align: center;
+
+    padding-top: 54px;
+    padding-bottom: 62px;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(33, 114, 255, .13),
+            transparent 38%
+        );
+}
+
+.small-title {
+    color: var(--blue);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 13px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: .95;
+
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+    margin-left: 4px;
+}
+
+.hero-text {
+    max-width: 340px;
+
+    margin: 18px auto 25px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   NÚMEROS
+===================================================== */
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+
+    margin: 0 auto 25px;
+}
+
+.number {
+    padding: 12px 4px;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.number strong {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    color: #fff;
+}
+
+.number span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #68758f;
+
+    font-size: 7px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+
+/* =====================================================
+   BOTÃO PRINCIPAL
+===================================================== */
+
+.main-button {
+    display: flex;
+
+    width: 100%;
+    min-height: 44px;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 12px;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #13dfff,
+            #4478ff
+        );
+
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: .3px;
+
+    box-shadow:
+        0 7px 25px rgba(24, 142, 255, .18);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.main-button:active {
+    transform: scale(.98);
+}
+
+.button-subtitle {
+    margin-top: 8px;
+
+    color: #56627a;
+
+    font-size: 7px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+.transformation,
+.method,
+.about,
+.testimonials,
+.final-cta {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.transformation {
+    background:
+        linear-gradient(
+            180deg,
+            #070b17,
+            #080d1a
+        );
+}
+
+.section-text {
+    color: var(--muted);
+
+    font-size: 10px;
+    line-height: 1.65;
+
+    text-align: center;
+
+    max-width: 340px;
+
+    margin: 15px auto 28px;
+}
+
+h2 {
+    font-size: 25px;
+    line-height: 1.12;
+
+    text-align: center;
+
+    letter-spacing: -1px;
+}
+
+h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+
+/* =====================================================
+   ANTES / DEPOIS
+===================================================== */
+
+.before-after {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6px;
+
+    margin-bottom: 8px;
+}
+
+.photo {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 1 / 1.18;
+
+    border-radius: 4px;
+
+    background: #0d1425;
+
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.photo > span {
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+
+    z-index: 2;
+
+    padding: 4px 6px;
+
+    border-radius: 2px;
+
+    background: rgba(0,0,0,.72);
+
+    color: #fff;
+
+    font-size: 7px;
+    font-weight: 900;
+
+    letter-spacing: .8px;
+}
+
+.photo:nth-child(2) > span {
+    color: var(--blue);
+}
+
+
+/* =====================================================
+   DESTAQUE
+===================================================== */
+
+.highlight {
+    margin-top: 22px;
+
+    padding: 15px;
+
+    border: 1px solid rgba(43,122,255,.25);
+
+    border-left: 2px solid var(--blue);
+
+    background: rgba(12,24,48,.55);
+
+    border-radius: 3px;
+}
+
+.highlight p {
+    color: #8996ae;
+
+    font-size: 9px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+.highlight strong {
+    color: #eaf8ff;
+}
+/* =====================================================
+   MÉTODO
+===================================================== */
+
+.method {
+    background:
+        linear-gradient(
+            180deg,
+            #080d1a,
+            #070b17
+        );
+}
+
+.method-card {
+    display: flex;
+
+    gap: 13px;
+
+    margin-bottom: 8px;
+    padding: 16px 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 25, 48, .9),
+            rgba(8, 14, 28, .95)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.method-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    right: -35px;
+    bottom: -35px;
+
+    border-radius: 50%;
+
+    background: rgba(25,217,255,.06);
+
+    filter: blur(10px);
+}
+
+.method-number {
+    flex-shrink: 0;
+
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+
+    border: 1px solid rgba(25,217,255,.3);
+
+    background: rgba(25,217,255,.06);
+
+    color: var(--blue);
+
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.method-card h3 {
+    color: #f2f6ff;
+
+    font-size: 11px;
+    line-height: 1.35;
+
+    margin-bottom: 7px;
+}
+
+.method-card p {
+    color: #69758d;
+
+    font-size: 8px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   QUEM SOU EU
+===================================================== */
+
+.about {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(24,104,255,.09),
+            transparent 38%
+        );
+}
+
+.profile-photo {
+    width: 145px;
+    height: 145px;
+
+    margin: 0 auto 24px;
+
+    padding: 3px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--blue-2)
+        );
+
+    box-shadow:
+        0 0 35px rgba(24,150,255,.13);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    background: #101827;
+}
+
+.about-text {
+    max-width: 340px;
+
+    margin: 15px auto;
+
+    color: #7f8aa1;
+
+    font-size: 10px;
+    line-height: 1.75;
+}
+
+.about-text strong {
+    color: #e9f7ff;
+}
+
+
+/* =====================================================
+   REDES SOCIAIS
+===================================================== */
+
+.socials {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+.social-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 13px;
+
+    text-align: left;
+
+    background: rgba(10,18,35,.85);
+
+    border: 1px solid rgba(87,127,206,.17);
+
+    border-radius: 4px;
+
+    transition:
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.social-card:active {
+    transform: scale(.98);
+
+    border-color: rgba(25,217,255,.4);
+}
+
+.social-icon {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background: rgba(25,217,255,.08);
+
+    color: var(--blue);
+
+    font-size: 14px;
+}
+
+.social-card strong {
+    display: block;
+
+    color: #eaf0ff;
+
+    font-size: 9px;
+}
+
+.social-card small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #59667f;
+
+    font-size: 7px;
+}
+
+
+/* =====================================================
+   NÚMEROS DO PERFIL
+===================================================== */
+
+.profile-numbers {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 27px;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.profile-numbers > div {
+    padding: 13px 3px;
+}
+
+.profile-numbers > div + div {
+    border-left: 1px solid rgba(255,255,255,.06);
+}
+
+.profile-numbers strong {
+    display: block;
+
+    color: #f4f8ff;
+
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.profile-numbers span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #5e6a82;
+
+    font-size: 6px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+
+/* =====================================================
+   DEPOIMENTOS
+===================================================== */
+
+.testimonials {
+    background: #080d1a;
+}
+
+.testimonial-card {
+    margin-top: 8px;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14,24,46,.95),
+            rgba(8,14,27,.95)
+        );
+
+    border: 1px solid rgba(81,123,206,.18);
+
+    border-radius: 5px;
+}
+
+.testimonial-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 11px;
+}
+
+.testimonial-top strong {
+    color: #dce6fa;
+
+    font-size: 8px;
+}
+
+.testimonial-top span {
+    color: var(--blue);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+.testimonial-card p {
+    color: #8995aa;
+
+    font-size: 9px;
+    line-height: 1.7;
+}
+
+.testimonial-card small {
+    display: block;
+
+    margin-top: 11px;
+
+    color: #4e5a71;
+
+    font-size: 6px;
+}
+
+
+/* =====================================================
+   CTA FINAL
+===================================================== */
+
+.final-cta {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(27,110,255,.12),
+            transparent 48%
+        );
+}
+
+.final-cta .section-text {
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    padding-top: 38px;
+    padding-bottom: 28px;
+
+    border-top: 1px solid rgba(255,255,255,.05);
+
+    background: #050914;
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 15px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+.footer-logo span {
+    color: var(--blue);
+}
+
+.footer > .container > p {
+    max-width: 270px;
+
+    margin: 11px auto 0;
+
+    color: #505c73;
+
+    font-size: 7px;
+    line-height: 1.6;
+}
+
+.footer-socials {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 17px;
+
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    color: #77839a;
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+.footer-links a {
+    color: #49546a;
+
+    font-size: 6px;
+
+    text-transform: uppercase;
+}
+
+.copyright {
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.04);
+
+    margin-top: 20px !important;
+
+    font-size: 6px !important;
+
+    color: #353e51 !important;
+}
+/* =====================================================
+   AJUSTES PARA CELULAR
+===================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    min-width: 0;
+}
+
+
+/* =====================================================
+   IMAGENS SEM QUEBRAR O LAYOUT
+===================================================== */
+
+.photo img,
+.profile-photo img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   EFEITO DE TOQUE NOS BOTÕES
+===================================================== */
+
+.main-button:hover {
+    box-shadow:
+        0 10px 30px rgba(25, 150, 255, .28);
+}
+
+
+/* =====================================================
+   ANIMAÇÃO SUAVE
+===================================================== */
+
+@keyframes riseFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero .container {
+    animation:
+        riseFade .7s ease both;
+}
+
+
+/* =====================================================
+   BRILHO DO LOGO
+===================================================== */
+
+.logo span,
+.footer-logo span {
+    text-shadow:
+        0 0 15px rgba(25,217,255,.18);
+}
+
+
+/* =====================================================
+   TELAS UM POUCO MAIORES
+===================================================== */
+
+@media (min-width: 480px) {
+
+    :root {
+        --container: 420px;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .photo {
+        aspect-ratio: 1 / 1.2;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (min-width: 700px) {
+
+    :root {
+        --container: 620px;
+    }
+
+    .header-content,
+    .container {
+        width: min(
+            calc(100% - 50px),
+            var(--container)
+        );
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero-text {
+        font-size: 13px;
+        max-width: 500px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .section-text {
+        font-size: 12px;
+        max-width: 500px;
+    }
+
+    .method-card {
+        padding: 20px;
+    }
+
+    .method-card h3 {
+        font-size: 14px;
+    }
+
+    .method-card p {
+        font-size: 10px;
+    }
+
+    .about-text {
+        font-size: 12px;
+        max-width: 500px;
+    }
+
+}
+
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media (min-width: 1000px) {
+
+    :root {
+        --container: 760px;
+    }
+
+    .header-content,
+    .container {
+        width: min(
+            calc(100% - 70px),
+            var(--container)
+        );
+    }
+
+    .header-content {
+        min-height: 68px;
+    }
+
+    .hero {
+        padding-top: 95px;
+        padding-bottom: 90px;
+    }
+
+    .hero h1 {
+        font-size: 78px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .numbers {
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-button {
+        max-width: 430px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .transformation,
+    .method,
+    .about,
+    .testimonials,
+    .final-cta {
+        padding-top: 95px;
+        padding-bottom: 95px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    .section-text {
+        font-size: 13px;
+    }
+
+    .before-after {
+        gap: 10px;
+    }
+
+    .method-card {
+        padding: 22px;
+    }
+
+    .method-card h3 {
+        font-size: 15px;
+    }
+
+    .method-card p {
+        font-size: 11px;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE
+===================================================== */
+
+a:focus-visible {
+    outline: 2px solid var(--blue);
+
+    outline-offset: 3px;
+}
+
+
+/* =====================================================
+   EVITAR SELEÇÃO ACIDENTAL
+===================================================== */
+
+.main-button,
+.social-card,
+.header-socials a,
+.footer-socials a,
+.footer-links a {
+    user-select: none;
+}
+
+
+/* =====================================================
+   FIM DO CSS
+===================================================== */
